@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} ^custommobileapps.jeremypdickey\.xyz$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.custommobileapps.jeremypdickey\.xyz$
+RewriteRule ^(.*)$ "https\:\/\/www\.purplecereal\.com\/$1" [R=301,L]
